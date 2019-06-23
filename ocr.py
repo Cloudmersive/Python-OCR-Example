@@ -1,8 +1,13 @@
 import cloudmersive_ocr_api_client
 from cloudmersive_ocr_api_client.rest import ApiException
 
+import sys
+import os.path
+print (sys.path[0])
+
+
 api_instance = cloudmersive_ocr_api_client.ImageOcrApi()
-image_file = './example_hebrew.jpg' # file | Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
+image_file = sys.path[0] + '\\example_hebrew.png' # file | Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported.
 
 api_instance.api_client.configuration.api_key = {}
 api_instance.api_client.configuration.api_key['Apikey'] = '04d1a7be-c9d1-4d93-8ec4-e7545c2a570a'
